@@ -67,7 +67,6 @@ const guestQuestions = ref(['']) // allow multiple questions
 const backgroundPhoto = ref(null)
 const backgroundPreview = ref('')
 const router = useRouter();
-
 function handlePhotoUpload(event) {
   const file = event.target.files[0]
   if (file) {
