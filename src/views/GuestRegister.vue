@@ -15,6 +15,15 @@
         </select>
       </div>
 
+      <div class="form-group">
+        <label>Will you be attending?</label>
+        <select v-model="attendanceStatus">
+          <option disabled value="">-- Select Response --</option>
+          <option value="Yes">Yes, I'll be there!</option>
+          <option value="No">Sorry, I can't make it</option>
+        </select>
+      </div>
+
       <div class="form-group" v-for="(q, index) in event.questions" :key="index">
         <label>{{ q }}</label>
         <input type="text" v-model="answers[index]" placeholder="Your answer" />
@@ -32,6 +41,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+const attendanceStatus = ref('')
 
 const event = ref({
   title: "~Swathie's Birthday~",
@@ -75,15 +85,22 @@ const submitResponse = () => {
     return
   }
 
+  if (!attendanceStatus.value) {
+    alert('Please let us know if you’re attending.')
+    return
+  }
+
   const response = {
     guestName: selectedGuest.value,
+    attending: attendanceStatus.value,
     answers: answers.value,
   }
 
   console.log('Submitted response:', response)
-  alert('Thank you for RSVPing!')
+  alert('Thank you for responding!')
   router.push('/') 
 }
+
 </script>
 
 <style scoped>

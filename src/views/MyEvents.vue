@@ -27,23 +27,17 @@
 
         <!--toggle starts here-->
         <div class="responses-section" v-if="event.responses && event.responses.length">
-          <h3>Guest Responses</h3>
-          <div 
-            class="response" 
-            v-for="(resp, i) in event.responses" 
-            :key="i"
-          >
-            <h4>{{ resp.guestName }}</h4>
-            <ul>
-              <li 
-                v-for="(answer, qIndex) in resp.answers" 
-                :key="qIndex"
-              >
-                <strong>{{ event.questions[qIndex] }}:</strong> {{ answer }}
-              </li>
-            </ul>
-          </div>
-        </div> 
+        <h3>Guest Responses</h3>
+        <div class="response" v-for="(resp, i) in event.responses" :key="i">
+          <h4>{{ resp.guestName }}</h4>
+          <p><strong>Status:</strong> {{ resp.attending }}</p>
+          <ul>
+            <li v-for="(answer, qIndex) in resp.answers" :key="qIndex">
+              <strong>{{ event.questions[qIndex] }}:</strong> {{ answer }}
+            </li>
+          </ul>
+        </div>
+      </div>
 
         <!--toggle ends here-->
       </div>
@@ -55,10 +49,8 @@
 import { ref } from 'vue'
 import { useRouter } from "vue-router"
 
-// Simulated auth state (you can toggle this manually if needed)
 const isLoggedIn = ref(true)
 
-// Hardcoded sample events – update or add your own here
 const events = ref([
   {
     id: '1',
@@ -69,9 +61,14 @@ const events = ref([
     responses: [
       {
         guestName: 'Nevaeh',
+        attending: 'Yes',
         answers: ['Strawberry cake', 'No allergies']
       },
-
+      {
+        guestName: 'Ayusha',
+        attending: 'No',
+        answers: ['', '']
+      }
     ]
   },
   {
@@ -83,6 +80,7 @@ const events = ref([
     responses: [
       {
         guestName: 'Ruth',
+        attending: 'Yes',
         answers: ['Yes!', 'Frankenstein']
       }
     ]
@@ -108,6 +106,7 @@ const deleteEvent = (eventId) => {
   events.value = events.value.filter(event => event.id !== eventId)
 }
 </script>
+
 
 <style> 
 body {
