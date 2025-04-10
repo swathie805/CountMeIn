@@ -3,6 +3,7 @@
       <!-- Navigation bar -->
       <nav class="navbar">
         <button @click="navigateToRegister" class="btn primary">Plan an event</button>
+        <button @click="navigateToGuest" class="btn primary">RSVP here</button>
       </nav>
 
       <!-- Main Content -->
@@ -33,6 +34,12 @@
     console.log('Attempting navigation to login page');
     router.push('/login');
   }
+
+  const navigateToGuest = () => {
+    console.log('Attempting navigation to guest page');
+    router.push('/GuestRegister');
+  }
+
 </script>
   
   <style scoped>
