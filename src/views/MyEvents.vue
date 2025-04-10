@@ -6,7 +6,7 @@
     <nav class="nav-bar">
       <router-link to="/MyEvents">My Events</router-link>
       <button @click="handleSignOut" v-if="isLoggedIn">Sign out</button>
-      <button @click="eventCreation">Create Events</button>
+      <button @click="eventCreation">Create Event</button>
     </nav>
 
     <!-- Events Section -->

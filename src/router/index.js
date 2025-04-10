@@ -6,7 +6,6 @@ import MyEvents from "../views/MyEvents.vue";
 import CreateEvent from "@/views/CreateEvent.vue";
 import GuestRegister from "@/views/GuestRegister.vue";
 
-
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -39,6 +38,8 @@ const router = createRouter({
             path: '/GuestRegister',
             component: GuestRegister,
         },
+
+        // add new page here
         
 
 

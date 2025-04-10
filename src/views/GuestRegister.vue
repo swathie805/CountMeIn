@@ -29,18 +29,16 @@
 import { ref, onMounted, computed } from 'vue'
 
 const event = ref({
-  title: 'Pizza Party!',
-  datetime: '2025-04-20 18:00',
-  description: 'Join us for a night of pizza, games, and fun!',
+  title: "Swathie's Birthday 🥳",
+  datetime: '2025-05-01 13:00',
+  description: "For a celebration of Swathie's 20th birthday!",
   guests: [
-    { name: 'Alice' },
-    { name: 'Bob' },
-    { name: 'Charlie' }
+    { name: 'Nevaeh' },
+    { name: 'Ayusha' },
   ],
   questions: [
-    'What type of pizza do you want?',
-    'Do you have any dietary restrictions?',
-    'Will you bring a friend?'
+    'What snacks are you bringing?', 
+    'Any allergies?'
   ],
   backgroundPhoto: 'https://images.unsplash.com/photo-1601924572297-d219e25d0a7b'
 })
@@ -58,6 +56,9 @@ onMounted(() => {
   answers.value = Array(event.value.questions.length).fill('')
 })
 
+import { useRouter } from "vue-router"
+const router = useRouter();
+
 const submitResponse = () => {
   if (!selectedGuest.value) {
     alert('Please select your name.')
@@ -70,7 +71,8 @@ const submitResponse = () => {
   }
 
   console.log('Submitted response:', response)
-  alert('Response submitted (logged in console)!')
+  alert('Thank you for RSVPing!')
+  router.push('/') 
 }
 </script>
 

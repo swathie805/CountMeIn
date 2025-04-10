@@ -96,8 +96,6 @@ function createEvent() {
   router.push("/MyEvents");
 }
 
-
-
 </script>
 
   
