@@ -24,6 +24,7 @@
           <button @click="editEvent()">Edit</button>
           <button @click="deleteEvent(event.id)">Delete</button>
         </div>
+
         <!--toggle starts here-->
         <div class="responses-section" v-if="event.responses && event.responses.length">
           <h3>Guest Responses</h3>
@@ -42,7 +43,9 @@
               </li>
             </ul>
           </div>
-        </div> <!--toggle ends here-->
+        </div> 
+
+        <!--toggle ends here-->
       </div>
     </div>
   </div>

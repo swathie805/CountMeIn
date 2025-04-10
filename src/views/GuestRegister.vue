@@ -20,6 +20,11 @@
         <input type="text" v-model="answers[index]" placeholder="Your answer" />
       </div>
 
+      <div class="form-group">
+        <label>Enter your email for confirmation</label>
+        <input type="text" placeholder="Email address" />
+      </div>
+        
       <button @click="submitResponse">Submit</button>
     </div>
   </div>
@@ -35,6 +40,11 @@ const event = ref({
   guests: [
     { name: 'Nevaeh' },
     { name: 'Ayusha' },
+    { name: 'Ruth'},
+    { name: 'Ashley'},
+    { name: 'Megan'},
+    { name: 'Emma'},
+    { name: 'Josh'},
   ],
   questions: [
     'What snacks are you bringing?', 

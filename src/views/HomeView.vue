@@ -10,15 +10,16 @@
       <div class="hero">
         <h1>Welcome to CountMeIn</h1>
         <p>Your one-stop platform for managing events and RSVPs</p>
+        <h2>Create Your Event. Share the Link. Count Me In.</h2>
       </div>
       
       <!-- Features Section -->
       <section class="features">
-        <h2>Features</h2>
+        <h2>A New Way to Plan</h2>
         <ul>
-          <li>Create and manage events</li>
-          <li>Send invitations</li>
-          <li>Track RSVPs</li>
+          <li>Create custom events</li>
+          <li>Link invitations</li>
+          <li>Track guest responses</li>
           <li>Manage attendees</li>
         </ul>
       </section>
@@ -42,65 +43,86 @@
 
 </script>
   
-  <style scoped>
-  .home {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-  }
-  
-  /*Navigation bar */
-  .navbar{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
+<style scoped>
+.home {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1c2e4a;
+}
 
-  /* Hero Section */
-  .hero {
-    margin-top: 50px;
-  }
+/* Navigation bar */
+.navbar {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
+/* Hero Section */
+.hero {
+  margin-top: 6rem;
+}
 
-  .features {
-    margin: 2rem 0;
-    text-align: left;
-    display: inline-block;
-  }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0a69a6;
+}
 
-  .ul{
-    list-style: none;
-    padding: 0;
-  }
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
 
-  li{
-    margin-bottom: 0.5 rem;
-  }
+/* Features Section */
+.features {
+  margin: 3rem auto;
+  text-align: left;
+  display: inline-block;
+  background-color: #e0f0ff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
 
-  /* Buttons */
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-  }
+.features h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1c2e4a;
+}
 
-  .primary {
-    background-color: #4c91af;
-    color: white;
-  }
+.features ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
 
-  .primary:hover{
-    background-color: #4556a0;
-  }
+.features li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #4c91af;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #3a7794;
+}
 </style>
