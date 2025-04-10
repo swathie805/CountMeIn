@@ -93,6 +93,11 @@ function createEvent() {
     questions: guestQuestions.value,
     backgroundPhoto: backgroundPhoto.value,
   })
+
+  alert("Event Created!")
+  
+  alert("Link: http://192.168.2.16:8080/GuestRegister");
+
   router.push("/MyEvents");
 }
 

@@ -29,7 +29,7 @@
 import { ref, onMounted, computed } from 'vue'
 
 const event = ref({
-  title: "Swathie's Birthday 🥳",
+  title: "~Swathie's Birthday~",
   datetime: '2025-05-01 13:00',
   description: "For a celebration of Swathie's 20th birthday!",
   guests: [

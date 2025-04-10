@@ -24,7 +24,7 @@
           <button @click="editEvent()">Edit</button>
           <button @click="deleteEvent(event.id)">Delete</button>
         </div>
-
+        <!--toggle starts here-->
         <div class="responses-section" v-if="event.responses && event.responses.length">
           <h3>Guest Responses</h3>
           <div 
@@ -42,7 +42,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> <!--toggle ends here-->
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ const isLoggedIn = ref(true)
 const events = ref([
   {
     id: '1',
-    title: "Swathie's Birthday 🥳",
+    title: "~Swathie's Birthday~",
     description: "For a celebration of Swathie's 20th birthday!",
     datetime: '2025-05-01 13:00',
     questions: ['What snacks are you bringing?', 'Any allergies?'],
@@ -68,10 +68,7 @@ const events = ref([
         guestName: 'Nevaeh',
         answers: ['Strawberry cake', 'No allergies']
       },
-      {
-        guestName: 'Ayusha',
-        answers: ['Pocky', 'None']
-      }
+
     ]
   },
   {
