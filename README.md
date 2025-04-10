@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+Have npm and node.js installed on your computer.
 Type "npm install" on terminal 
 ```
 ## To run 
