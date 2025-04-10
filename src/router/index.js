@@ -4,7 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import PlannerRegister from "../views/PlannerRegister.vue";
 import MyEvents from "../views/MyEvents.vue";
 import CreateEvent from "@/views/CreateEvent.vue";
-import CreateRegister from "@/views/CreateRegister.vue";
+import GuestRegister from "@/views/GuestRegister.vue";
 
 
 const router = createRouter({
@@ -36,8 +36,8 @@ const router = createRouter({
         },
 
         {
-            path: '/CreateRegister',
-            component: CreateRegister,
+            path: '/GuestRegister',
+            component: GuestRegister,
         },
         
 
